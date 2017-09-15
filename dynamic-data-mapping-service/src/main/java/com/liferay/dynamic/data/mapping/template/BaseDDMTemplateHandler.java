@@ -112,13 +112,13 @@ public abstract class BaseDDMTemplateHandler extends BaseTemplateHandler {
 			ddmStructureId);
 
 		List<String> fieldNames = ListUtil.fromCollection(
-				ddmStructure.getFieldNames());
+			ddmStructure.getFieldNames());
 
 		Map<String, String> nestedFields = new HashMap<>();
 
 		for (String fieldName : fieldNames) {
 			List<String> childNames = ddmStructure.getChildrenFieldNames(
-					fieldName);
+				fieldName);
 
 			for (String childName : childNames) {
 				nestedFields.put(childName, fieldName);
